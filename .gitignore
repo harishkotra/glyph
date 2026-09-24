@@ -1,0 +1,36 @@
+# node_modules, dist, build outputs
+node_modules/
+backend/dist/
+frontend/dist/
+dist/
+build/
+
+# casts are runtime artifacts (regenerated on every run)
+casts/
+*.cast
+
+# temp PTY script dirs live in os.tmpdir, but be safe
+glyph-*/
+
+# logs
+*.log
+npm-debug.log*
+/tmp/glyph-*.log
+
+# env & secrets — NEVER commit keys
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# misc
+*.tsbuildinfo
+
+docs/

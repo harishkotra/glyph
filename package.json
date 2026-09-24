@@ -1,0 +1,20 @@
+{
+  "name": "glyph",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently -k -n backend,frontend \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\"",
+    "glyph": "npm run glyph --workspace=backend",
+    "verify": "npm run verify --workspace=backend"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "allowScripts": {
+    "node-pty@1.1.0": true
+  }
+}
