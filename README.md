@@ -14,10 +14,10 @@
 │  ┌─────────┐  POST /api/glyph  ┌──────────┐  ┌────────────┐  │
 │  │ CORNER A│ ────────────────▶ │ Slot A   │─▶│ Provider A │  │
 │  │ CORNER B│ ────────────────▶ │ Slot B   │─▶│ Provider B │  │
-│  └─────────┘  identical prompt └──────────┘  │ (Particle / │  │
-│  (+fresh nonce each,                            Ollama / LM  │  │
-│   in parallel)                                 Studio / …)  │  │
-│                                               └────────────┘  │
+│  └─────────┘  identical prompt └──────────┘  │ (Particle / │ │
+│  (+fresh nonce each,                         Ollama / LM  │  │
+│   in parallel)                               Studio / …)  │  │
+│                                              └────────────┘  │
 │  ┌─────────┐  POST /api/run    ┌──────────────────────────┐  │
 │  │ CRT  A  │ ◀──────────────── │ AST scan → node-pty PTY  │  │
 │  │ CRT  B  │  cast [{t,data}]  │ 6s hard kill → .cast file│  │
@@ -37,6 +37,11 @@
 | GIF      | [`agg`](https://github.com/asciinema/agg) | `.cast` → `.gif` for sharing |
 
 No three.js. No canvas animation. No auth, no DB, no history.
+
+<img width="1777" height="1426" alt="screencapture-localhost-5173-2026-09-24-07_21_15" src="https://github.com/user-attachments/assets/d755aa6f-1882-4a50-9df9-ae199fc40963" />
+<img width="1777" height="1426" alt="screencapture-localhost-5173-2026-09-24-07_24_15" src="https://github.com/user-attachments/assets/a0432fab-f18b-4359-9d78-2c7bb4bdd53a" />
+
+https://github.com/user-attachments/assets/c4c73026-1f5b-4bb5-8a6e-e8bc4120f33c
 
 ## Quickstart
 
@@ -136,12 +141,7 @@ GIF: `agg casts/glyph-A-<ts>.cast out.gif` (the UI's "Copy GIF command" builds i
 
 ## UI
 
-CRT-broadcast identity: scoreboard masthead with ON AIR lamp, tale-of-the-tape config
-(Corner A cyan / Corner B magenta), prompt deck with 4 presets
-(spinning ASCII cube · burning fire · scrolling starfield · bar visualiser),
-two CRT panes with scanlines, Play/Pause/Restart/step-frame + scrubber,
-chrome-hiding **record mode** for thumbnails, per-pane stats
-(model · exit · bytes · frames · duration · reasoning n/a-or-count · violation badge).
+CRT-broadcast identity: scoreboard masthead with ON AIR lamp, tale-of-the-tape config (Corner A cyan / Corner B magenta), prompt deck with 4 presets (spinning ASCII cube · burning fire · scrolling starfield · bar visualiser), two CRT panes with scanlines, Play/Pause/Restart/step-frame + scrubber, chrome-hiding **record mode** for thumbnails, per-pane stats (model · exit · bytes · frames · duration · reasoning n/a-or-count · violation badge).
 
 ## Fork & contribute
 
